@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://d1y3pl71tvoccx.cloudfront.net/1.0.0/AmazonEmber-Rg.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Patua+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="overlay"></div>
+
+    <div class="start-page">
+
+        <h1>WELCOME TO TIC TAC TOE</h1>
+
+        <div class="input-box">
+            <label for="player1" class="icon"><i class="fa-solid fa-user"></i></label>
+            <input type="text" class="player" id="player1" placeholder="Enter Player 1 Name" autocomplete="off">
+            <p class="error"></p>
+        </div>
+
+        <div class="input-box">
+            <label for="player2" class="icon"><i class="fa-solid fa-user"></i></label>
+            <input type="text" class="player" id="player2" placeholder="Enter Player 2 Name" autocomplete="off">
+            <p class="error"></p>
+        </div>
+
+        <div class="buttons">
+            <button class="skip-btn">Skip</button>
+            <button class="getStart" onclick="StartGame()">Get Start</button>
+        </div>
+ 
+    </div>
+
+    <div class="container hide">
+
+        <div class="winner" id="winner">
+            <h2 class="winner-msg">Congratulations, Winner is player</h2>
+            <button class="newgame" id="newgame">NEW GAME</button>
+        </div>
+
+        <div class="boxes ">
+            <div class="row">
+                <button class="btn" id="btn1"></button>
+                <button class="btn" id="btn2"></button>
+                <button class="btn" id="btn3"></button>
+            </div>
+            <div class="row">
+                <button class="btn" id="btn4"></button>
+                <button class="btn" id="btn5"></button>
+                <button class="btn" id="btn6"></button>
+            </div>
+            <div class="row">
+                <button class="btn" id="btn7"></button>
+                <button class="btn" id="btn8"></button>
+                <button class="btn" id="btn9"></button>
+            </div>
+        </div>
+        <button class="reset-btn " id="reset-btn">Reset Game</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
