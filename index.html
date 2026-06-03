@@ -100,7 +100,7 @@
   -->
     <style>
         :root {
-            --cell-size: min(28vw, 140px);
+            --cell-size: min(28vw, 120px);
         }
 
         @media (max-width: 400px) {
@@ -448,10 +448,10 @@
     <div class="fixed inset-0 z-0 pointer-events-none" id="stars"></div>
 
     <!-- Main wrapper -->
-    <div class="relative z-10 flex flex-col items-center gap-5 w-full max-w-[520px]">
+    <div class="z-10 flex flex-col items-center gap-5 w-full max-w-[520px]">
 
         <!-- Title -->
-        <h1 class="font-orbitron text-[clamp(1.5rem,5vw,2.2rem)] font-black tracking-[0.18em] uppercase select-none"
+        <h1 class="font-orbitron text-[clamp(1.5rem,5vw,1.8rem)] font-black tracking-[0.18em] uppercase select-none"
             style="background:linear-gradient(90deg,#00f5ff,#a78bfa,#ff2d78);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 18px rgba(0,245,255,0.35))">
             TIC TAC TOE
         </h1>
@@ -470,31 +470,26 @@
         <!-- Scoreboard -->
         <div class="flex gap-2.5 w-full">
             <!-- X card -->
-            <div id="cardX"
-                class="score-card x-card active-turn flex-1 px-2.5 py-3 rounded-[18px] border border-white/[0.09] bg-[rgba(10,10,35,0.7)] backdrop-blur-xl text-center transition-all duration-[250ms] relative overflow-hidden">
-                <div class="font-orbitron text-[0.6rem] font-bold tracking-[0.15em] uppercase text-x-neon">Player X
-                </div>
+            <div id="cardX" class="score-card x-card active-turn flex-1 px-2.5 py-2 rounded-lg border border-white/[0.09] bg-[rgba(10,10,35,0.7)] backdrop-blur-xl text-center transition-all duration-[250ms] relative overflow-hidden">
+                <div class="font-orbitron text-[10px] font-bold tracking-[0.15em] uppercase text-x-neon">Player X </div>
                 <div id="scoreX"
-                    class="font-orbitron text-[clamp(1.4rem,4vw,2rem)] font-black text-[#e8eaf6] leading-none mt-1">0
+                    class="font-orbitron text-[clamp(1.4rem,4vw,1.5rem)] font-black text-[#e8eaf6] leading-none mt-1">0
                 </div>
                 <div class="text-[0.65rem] text-white/45 tracking-[0.08em] mt-0.5">Wins</div>
             </div>
             <!-- Draw card -->
-            <div id="cardD"
-                class="score-card d-card flex-1 px-2.5 py-3 rounded-[18px] border border-white/[0.09] bg-[rgba(10,10,35,0.7)] backdrop-blur-xl text-center transition-all duration-[250ms] relative overflow-hidden">
-                <div class="font-orbitron text-[0.6rem] font-bold tracking-[0.15em] uppercase text-win-glow">Draw</div>
+            <div id="cardD" class="score-card d-card flex-1 px-2.5 py-2 rounded-lg border border-white/[0.09] bg-[rgba(10,10,35,0.7)] backdrop-blur-xl text-center transition-all duration-[250ms] relative overflow-hidden">
+                <div class="font-orbitron text-[10px] font-bold tracking-[0.15em] uppercase text-win-glow">Draw</div>
                 <div id="scoreD"
-                    class="font-orbitron text-[clamp(1.4rem,4vw,2rem)] font-black text-[#e8eaf6] leading-none mt-1">0
+                    class="font-orbitron text-[clamp(1.4rem,4vw,1.5rem)] font-black text-[#e8eaf6] leading-none mt-1">0
                 </div>
                 <div class="text-[0.65rem] text-white/45 tracking-[0.08em] mt-0.5">Ties</div>
             </div>
             <!-- O card -->
-            <div id="cardO"
-                class="score-card o-card flex-1 px-2.5 py-3 rounded-[18px] border border-white/[0.09] bg-[rgba(10,10,35,0.7)] backdrop-blur-xl text-center transition-all duration-[250ms] relative overflow-hidden">
-                <div id="labelO" class="font-orbitron text-[0.6rem] font-bold tracking-[0.15em] uppercase text-o-neon">
-                    Player O</div>
+            <div id="cardO" class="score-card o-card flex-1 px-2.5 py-2 rounded-lg border border-white/[0.09] bg-[rgba(10,10,35,0.7)] backdrop-blur-xl text-center transition-all duration-[250ms] relative overflow-hidden">
+                <div id="labelO" class="font-orbitron text-[10px] font-bold tracking-[0.15em] uppercase text-o-neon"> Player O</div>
                 <div id="scoreO"
-                    class="font-orbitron text-[clamp(1.4rem,4vw,2rem)] font-black text-[#e8eaf6] leading-none mt-1">0
+                    class="font-orbitron text-[clamp(1.4rem,4vw,1.5rem)] font-black text-[#e8eaf6] leading-none mt-1">0
                 </div>
                 <div class="text-[0.65rem] text-white/45 tracking-[0.08em] mt-0.5">Wins</div>
             </div>
@@ -524,7 +519,7 @@
         </div>
 
         <!-- Buttons -->
-        <div class="flex gap-2.5">
+        <div class="flex gap-2.5 lg:absolute top-5 right-5">
             <button onclick="restartGame()"
                 class="neon-btn font-orbitron text-[0.65rem] font-bold tracking-[0.12em] uppercase px-6 py-3 rounded-full border border-x-neon/25 text-[#e8eaf6] cursor-pointer backdrop-blur-md transition-all duration-[250ms] relative overflow-hidden hover:-translate-y-0.5 hover:shadow-btn-x active:translate-y-0"
                 style="background:linear-gradient(135deg,rgba(0,245,255,.12),rgba(167,139,250,.12))">↺ &nbsp;
